@@ -16,9 +16,9 @@ git checkout master'''
       }
     }
 
-    stage('Validate') {
+    stage('Analyze') {
       steps {
-        echo 'Validated'
+        sh './gradlew sonarqube -Dsonar.host.url=localhost:9000'
       }
     }
 
