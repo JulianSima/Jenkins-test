@@ -7,6 +7,7 @@ pipeline {
         sh '''git pull https://github.com/JulianSima/Jenkins-test.git
 git checkout master'''
         sh './gradlew :spotlessApply'
+        sh './gradlew build'
       }
     }
 
