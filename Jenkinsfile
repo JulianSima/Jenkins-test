@@ -6,7 +6,7 @@ pipeline {
         git(url: 'https://github.com/JulianSima/Jenkins-test.git', branch: 'master', credentialsId: 'JulianSima')
         sh '''git pull https://github.com/JulianSima/Jenkins-test.git
 git checkout master'''
-        sh './gradlew build'
+        sh './gradlew :spotlessApply'
       }
     }
 
